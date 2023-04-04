@@ -33,15 +33,16 @@ function createTable(json) {
 
     json.forEach(jsonElem => {
         let tr = document.createElement('tr');
-        let tdBrand = document.createElement('td');
-        let tdName = document.createElement('td');
-
-        tdName.innerHTML = jsonElem.name;
-        tdBrand.innerHTML = jsonElem.brand;
-
-        tr.append(tdBrand)
-        tr.append(tdName)
-
+        tr.innerHTML = `<td>${jsonElem.art}</td>
+                        <td>${jsonElem.brand}</td>
+                        <td>${jsonElem.d_deliv}</td>
+                        <td>${jsonElem.gid}</td>
+                        <td>${jsonElem.is_returnable}</td>
+                        <td>${jsonElem.kr}</td>
+                        <td>${jsonElem.name}</td>
+                        <td>${jsonElem.num}</td>
+                        <td>${jsonElem.price}</td>
+                        <td>${jsonElem.whse}</td>`;
         tbody.append(tr)
     });
 
